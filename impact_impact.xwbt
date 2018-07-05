@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\impact.xsl
+OUTFILE=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga
+LICENSE=iMPACT
+USER_INFO=iMPACT

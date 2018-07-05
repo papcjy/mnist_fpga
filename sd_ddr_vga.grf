@@ -1,0 +1,196 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sat Aug 05 18:58:07 2017
+
+  SmartGuide Results
+  ------------------
+  This section describes the guide results after invoking the Router. This
+  report accurately reflects the differences between the input design
+  and the guide design.
+
+  Number of Components in the input design    |   3583
+    Number of guided Components               |   3568 out of   3583  99.6%
+    Number of re-implemented Components       |      3 out of   3583   0.1%
+    Number of new/changed Components          |     12 out of   3583   0.3%
+  Number of Nets in the input design          |  14980
+    Number of guided Nets                     |  14839 out of  14980  99.1%
+    Number of partially guided Nets           |     16 out of  14980   0.1%
+    Number of re-routed Nets                  |     62 out of  14980   0.4%
+    Number of new/changed Nets                |     63 out of  14980   0.4%
+
+
+The following Components were re-implemented.
+---------------------------------------------
+ cnn_inst/feature_map_inst2/add2_3<16> : SLICE_X14Y79.
+ cnn_inst/subsampling2_inst/relu_column<2> : SLICE_X32Y69.
+ cnn_inst/subsampling2_inst/adder_counter<1> : SLICE_X33Y67.
+
+
+The following Components are new/changed.
+-----------------------------------------
+ cnn_inst/subsampling2_inst/Madd_n0166_Madd_cy<3> : SLICE_X30Y66.
+ cnn_inst/subsampling2_inst/Madd_n0166_Madd_cy<7> : SLICE_X30Y67.
+ cnn_inst/subsampling2_inst/n0166<11> : SLICE_X30Y68.
+ cnn_inst/subsampling2_inst/n0254<3> : SLICE_X30Y72.
+ cnn_inst/subsampling2_inst/n0254<7> : SLICE_X30Y73.
+ cnn_inst/subsampling2_inst/n0254<9> : SLICE_X30Y74.
+ cnn_inst/subsampling2_inst/Mcompar_matrix2_2[11]_matrix2_1[11]_LessThan_96_o_cy<4> : SLICE_X36Y67.
+ cnn_inst/_n1948_inv : SLICE_X11Y54.
+ cnn_inst/buffer_en1 : SLICE_X22Y67.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd : SLICE_X31Y72.
+ cnn_inst/subsampling2_inst/_n02973 : SLICE_X32Y67.
+ cnn_inst/_n1921_inv1_1 : SLICE_X43Y96.
+
+
+The following Nets were re-routed.
+----------------------------------
+ cnn_inst/subsampling2_inst/relu_en.
+ cnn_inst/subsampling2_inst/N01.
+ cnn_inst/subsampling2_inst/relu_column<2>.
+ cnn_inst/_n1948_inv.
+ cnn_inst/subsampling2_inst/adder_counter<1>.
+ cnn_inst/subsampling2_inst/adder_counter<0>.
+ cnn_inst/subsampling2_inst/adder_counter[1]_PWR_18_o_equal_9_o_0_0.
+ cnn_inst/subsampling2_inst/relu_column<1>.
+ cnn_inst/buffer_en2.
+ cnn_inst/_n1932_inv.
+ cnn_inst/subsampling2_inst/ADDERTREE_INTERNAL_Madd_82.
+ cnn_inst/subsampling2_inst/ADDERTREE_INTERNAL_Madd_102.
+ cnn_inst/subsampling2_inst/_n0274<0>.
+ cnn_inst/subsampling2_inst/_n0273<0>.
+ cnn_inst/subsampling2_inst/_n0273<1>.
+ cnn_inst/subsampling2_inst/_n0274<1>.
+ cnn_inst/subsampling2_inst/_n0273<2>.
+ cnn_inst/subsampling2_inst/_n0274<2>.
+ cnn_inst/subsampling2_inst/_n0273<3>.
+ cnn_inst/subsampling2_inst/_n0274<3>.
+ cnn_inst/subsampling2_inst/_n0273<4>.
+ cnn_inst/subsampling2_inst/_n0274<4>.
+ cnn_inst/subsampling2_inst/_n0273<5>.
+ cnn_inst/subsampling2_inst/_n0274<5>.
+ cnn_inst/subsampling2_inst/_n0273<6>.
+ cnn_inst/subsampling2_inst/_n0274<6>.
+ cnn_inst/subsampling2_inst/_n0273<7>.
+ cnn_inst/subsampling2_inst/_n0274<7>.
+ cnn_inst/subsampling2_inst/_n0273<8>.
+ cnn_inst/subsampling2_inst/_n0274<8>.
+ cnn_inst/subsampling2_inst/_n0273<9>.
+ cnn_inst/subsampling2_inst/_n0274<9>.
+ cnn_inst/subsampling2_inst/_n0273<10>.
+ cnn_inst/subsampling2_inst/_n0274<10>.
+ cnn_inst/subsampling2_inst/_n0273<11>.
+ cnn_inst/subsampling2_inst/_n0274<11>.
+ cnn_inst/feature_map_inst2/add2_3<13>.
+ cnn_inst/feature_map_inst2/add2_3<14>.
+ cnn_inst/feature_map_inst2/add2_3<15>.
+ cnn_inst/feature_map_inst2/add2_3<16>.
+ cnn_inst/feature_map_inst2/add2_3<17>.
+ cnn_inst/feature_map_inst2/add2_3<18>.
+ cnn_inst/subsampling2_inst/_n0272<0>.
+ cnn_inst/subsampling2_inst/_n0272<1>.
+ cnn_inst/subsampling2_inst/_n0272<2>.
+ cnn_inst/subsampling2_inst/_n0272<3>.
+ cnn_inst/subsampling2_inst/_n0272<4>.
+ cnn_inst/subsampling2_inst/_n0272<5>.
+ cnn_inst/subsampling2_inst/_n0272<6>.
+ cnn_inst/subsampling2_inst/_n0272<7>.
+ cnn_inst/subsampling2_inst/_n0272<8>.
+ cnn_inst/subsampling2_inst/_n0272<9>.
+ cnn_inst/subsampling2_inst/_n0272<10>.
+ cnn_inst/subsampling2_inst/_n0272<11>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<13>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<14>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<15>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<16>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<17>.
+ cnn_inst/feature_map_inst2/mul_adder_reg25[18]_GND_12_o_add_51_OUT<18>.
+ cnn_inst/subsampling2_inst/Result<1>2.
+ cnn_inst/_n1921_inv1_1.
+
+
+The following Nets are new/changed.
+-----------------------------------
+ cnn_inst/subsampling2_inst/_n0353_inv.
+ cnn_inst/subsampling2_inst/Madd_n0196_Madd_lut<2>.
+ cnn_inst/subsampling2_inst/Madd_n0196_Madd_lut<4>.
+ cnn_inst/subsampling2_inst/Madd_n0196_Madd_lut<5>.
+ cnn_inst/subsampling2_inst/Madd_n0196_Madd_lut<3>.
+ cnn_inst/subsampling2_inst/_n0312_inv.
+ cnn_inst/subsampling2_inst/n0198<5>.
+ cnn_inst/subsampling2_inst/n0198<3>.
+ cnn_inst/subsampling2_inst/_n03041.
+ cnn_inst/subsampling2_inst/_n02973.
+ cnn_inst/subsampling2_inst/_n0297.
+ cnn_inst/subsampling2_inst/n0198<4>.
+ cnn_inst/subsampling2_inst/n0198<2>.
+ cnn_inst/subsampling2_inst/n0254<0>.
+ cnn_inst/subsampling2_inst/n0166<0>.
+ cnn_inst/subsampling2_inst/n0254<1>.
+ cnn_inst/subsampling2_inst/n0166<1>.
+ cnn_inst/subsampling2_inst/n0254<2>.
+ cnn_inst/subsampling2_inst/n0166<2>.
+ cnn_inst/subsampling2_inst/Madd_n0166_Madd_cy<3>.
+ cnn_inst/subsampling2_inst/n0254<3>.
+ cnn_inst/subsampling2_inst/n0166<3>.
+ cnn_inst/subsampling2_inst/n0254<4>.
+ cnn_inst/subsampling2_inst/n0166<4>.
+ cnn_inst/subsampling2_inst/n0254<5>.
+ cnn_inst/subsampling2_inst/n0166<5>.
+ cnn_inst/subsampling2_inst/n0254<6>.
+ cnn_inst/subsampling2_inst/n0166<6>.
+ cnn_inst/subsampling2_inst/Madd_n0166_Madd_cy<7>.
+ cnn_inst/subsampling2_inst/n0254<7>.
+ cnn_inst/subsampling2_inst/n0166<7>.
+ cnn_inst/subsampling2_inst/n0254<8>.
+ cnn_inst/subsampling2_inst/n0166<8>.
+ cnn_inst/subsampling2_inst/n0254<9>.
+ cnn_inst/subsampling2_inst/n0166<9>.
+ cnn_inst/subsampling2_inst/n0254<10>.
+ cnn_inst/subsampling2_inst/n0166<10>.
+ cnn_inst/subsampling2_inst/n0254<11>.
+ cnn_inst/subsampling2_inst/n0166<11>.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd1.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd2.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd_cy<0>3.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd3.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd4.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd5.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd6.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd_cy<0>7.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd7.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd8.
+ cnn_inst/subsampling2_inst/Madd_n0254_Madd9.
+ cnn_inst/subsampling2_inst/_n0271<0>.
+ cnn_inst/subsampling2_inst/_n0271<1>.
+ cnn_inst/subsampling2_inst/_n0271<2>.
+ cnn_inst/subsampling2_inst/_n0271<3>.
+ cnn_inst/subsampling2_inst/_n0271<4>.
+ cnn_inst/subsampling2_inst/_n0271<5>.
+ cnn_inst/subsampling2_inst/_n0271<6>.
+ cnn_inst/subsampling2_inst/_n0271<7>.
+ cnn_inst/subsampling2_inst/_n0271<8>.
+ cnn_inst/subsampling2_inst/_n0271<9>.
+ cnn_inst/subsampling2_inst/_n0271<10>.
+ cnn_inst/subsampling2_inst/_n0271<11>.
+
+
+The following Nets were partially guided.
+-----------------------------------------
+ clk_50M_BUFGP.
+ cnn_inst/conv1_done.
+ cnn_inst/wr_en.
+ cnn_inst/subsampling2_inst/addra<0>.
+ cnn_inst/subsampling2_inst/relu_row<3>.
+ cnn_inst/subsampling2_inst/relu_row<2>.
+ cnn_inst/feature_map_counter1_2<1>.
+ cnn_inst/buffer_en1.
+ cnn_inst/subsampling1_inst1/relu_en.
+ cnn_inst/feature_map_counter1_2<0>.
+ cnn_inst/subsampling2_inst/addra<2>.
+ cnn_inst/subsampling2_inst/addra<1>.
+ cnn_inst/subsampling2_inst/addra<4>.
+ cnn_inst/subsampling2_inst/addra<3>.
+ cnn_inst/subsampling2_inst/ADDERTREE_INTERNAL_Madd_02.
+ cnn_inst/subsampling2_inst/addra<5>.

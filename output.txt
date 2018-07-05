@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+128M
+FF
+sd_ddr_vga
+C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\
+
+MCS
+No

@@ -1,0 +1,89 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Tue Aug 08 21:40:10 2017
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 77 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   cnn_inst/Mram_buffer10_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer10_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer11_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer11_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer12_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer12_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer1_10x101_RAMD_O
+   cnn_inst/Mram_buffer1_10x102_RAMD_O
+   cnn_inst/Mram_buffer1_10x103_RAMD_O
+   cnn_inst/Mram_buffer1_10x104_RAMD_O
+   cnn_inst/Mram_buffer1_10x105_RAMD_O
+   cnn_inst/Mram_buffer1_10x106_RAMD_O
+   cnn_inst/Mram_buffer1_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer1_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer2_10x101_RAMD_O
+   cnn_inst/Mram_buffer2_10x102_RAMD_O
+   cnn_inst/Mram_buffer2_10x103_RAMD_O
+   cnn_inst/Mram_buffer2_10x104_RAMD_O
+   cnn_inst/Mram_buffer2_10x105_RAMD_O
+   cnn_inst/Mram_buffer2_10x106_RAMD_O
+   cnn_inst/Mram_buffer2_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer2_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer3_10x101_RAMD_O
+   cnn_inst/Mram_buffer3_10x102_RAMD_O
+   cnn_inst/Mram_buffer3_10x103_RAMD_O
+   cnn_inst/Mram_buffer3_10x104_RAMD_O
+   cnn_inst/Mram_buffer3_10x105_RAMD_O
+   cnn_inst/Mram_buffer3_10x106_RAMD_O
+   cnn_inst/Mram_buffer3_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer3_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer4_10x101_RAMD_O
+   cnn_inst/Mram_buffer4_10x102_RAMD_O
+   cnn_inst/Mram_buffer4_10x103_RAMD_O
+   cnn_inst/Mram_buffer4_10x104_RAMD_O
+   cnn_inst/Mram_buffer4_10x105_RAMD_O
+   cnn_inst/Mram_buffer4_10x106_RAMD_O
+   cnn_inst/Mram_buffer4_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer4_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer5_10x101_RAMD_O
+   cnn_inst/Mram_buffer5_10x102_RAMD_O
+   cnn_inst/Mram_buffer5_10x103_RAMD_O
+   cnn_inst/Mram_buffer5_10x104_RAMD_O
+   cnn_inst/Mram_buffer5_10x105_RAMD_O
+   cnn_inst/Mram_buffer5_10x106_RAMD_O
+   cnn_inst/Mram_buffer5_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer5_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer6_10x101_RAMD_O
+   cnn_inst/Mram_buffer6_10x102_RAMD_O
+   cnn_inst/Mram_buffer6_10x103_RAMD_O
+   cnn_inst/Mram_buffer6_10x104_RAMD_O
+   cnn_inst/Mram_buffer6_10x105_RAMD_O
+   cnn_inst/Mram_buffer6_10x106_RAMD_O
+   cnn_inst/Mram_buffer6_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer6_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer7_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer7_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer8_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer8_3x32_RAMD_D1_O
+   cnn_inst/Mram_buffer9_3x31_RAMD_D1_O
+   cnn_inst/Mram_buffer9_3x32_RAMD_D1_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1011_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1012_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1013_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1014_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1021_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1022_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1023_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1024_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1031_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1032_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1033_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x1034_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x104_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x105_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x106_RAMD_O
+   cnn_inst/subsampling2_inst/Mram_buffer_6x107_RAMD_O
+   reset_n_IBUF
+
+

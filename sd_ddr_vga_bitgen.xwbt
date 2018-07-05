@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.ncd
+OUTFILE=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.bit
+FAMILY=Spartan6
+PART=xc6slx45-2csg324
+WORKINGDIR=C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga
+LICENSE=WebPack
+USER_INFO=__0_0_0

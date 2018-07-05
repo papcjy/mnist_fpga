@@ -1,0 +1,15 @@
+# Output products list for <dsp>
+_xmsgs\pn_parser.xmsgs
+dsp.asy
+dsp.gise
+dsp.ngc
+dsp.sym
+dsp.v
+dsp.veo
+dsp.xco
+dsp.xise
+dsp\doc\dsp48_macro_ds754.pdf
+dsp\doc\xbip_dsp48_macro_v2_1_readme.txt
+dsp\doc\xbip_dsp48_macro_v2_1_vinfo.html
+dsp_flist.txt
+dsp_xmdf.tcl

@@ -1,0 +1,2015 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: sd_ddr_vga.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sd_ddr_vga.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sd_ddr_vga"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-csg324
+
+---- Source Options
+Top Module Name                    : sd_ddr_vga
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Library Search Order               : "C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/remote_sources/_/synth/mig_39_2.lso"
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\multiply_adder.v" into library work
+Parsing module <multiply>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\multiplier.v" into library work
+Parsing module <multiplier>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling2.v" into library work
+Parsing module <maxpooling2>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling1.v" into library work
+Parsing module <maxpooling1>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\weight_108x10.v" into library work
+Parsing module <weight_108x10>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\shift_ram_24.v" into library work
+Parsing module <shift_ram_24>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\shift_ram_10.v" into library work
+Parsing module <shift_ram_10>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\image_24x24.v" into library work
+Parsing module <image_24x24>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2_2.v" into library work
+Parsing module <conv_weight2_2>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2_1.v" into library work
+Parsing module <conv_weight2_1>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2.v" into library work
+Parsing module <conv_weight2>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight1.v" into library work
+Parsing module <conv_weight1>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_bias2.v" into library work
+Parsing module <conv_bias2>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_bias1.v" into library work
+Parsing module <conv_bias1>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\conv2d.v" into library work
+Parsing module <conv2d>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\cnn_structure.v" into library work
+Parsing module <cnn_structure>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\chipscope_ila.v" into library work
+Parsing module <chipscope_ila>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\chipscope_icon.v" into library work
+Parsing module <chipscope_icon>.
+Analyzing Verilog file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\remote_sources\_\rtl\sd_ddr_vga.v" into library work
+Parsing module <sd_ddr_vga>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <sd_ddr_vga>.
+WARNING:HDLCompiler:1016 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\cnn_structure.v" Line 643: Port buffer_en is not connected to this instance
+
+Elaborating module <cnn_structure>.
+
+Elaborating module <conv_weight1>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight1.v" Line 39: Empty module <conv_weight1> remains a black box.
+
+Elaborating module <conv_weight2>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2.v" Line 39: Empty module <conv_weight2> remains a black box.
+
+Elaborating module <conv_bias1>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_bias1.v" Line 39: Empty module <conv_bias1> remains a black box.
+
+Elaborating module <conv_bias2>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_bias2.v" Line 39: Empty module <conv_bias2> remains a black box.
+
+Elaborating module <conv_weight2_1>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2_1.v" Line 39: Empty module <conv_weight2_1> remains a black box.
+
+Elaborating module <conv_weight2_2>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\conv_weight2_2.v" Line 39: Empty module <conv_weight2_2> remains a black box.
+
+Elaborating module <image_24x24>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\image_24x24.v" Line 39: Empty module <image_24x24> remains a black box.
+
+Elaborating module <shift_ram_24>.
+
+Elaborating module <shift_ram_10>.
+
+Elaborating module <conv2d>.
+
+Elaborating module <multiply>.
+
+Elaborating module <maxpooling1>.
+WARNING:HDLCompiler:413 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling1.v" Line 69: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling1.v" Line 74: Result of 10-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <maxpooling2>.
+WARNING:HDLCompiler:413 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling2.v" Line 100: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling2.v" Line 105: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <weight_108x10>.
+WARNING:HDLCompiler:1499 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\ipcore_dir\weight_108x10.v" Line 39: Empty module <weight_108x10> remains a black box.
+
+Elaborating module <multiplier>.
+WARNING:HDLCompiler:1127 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\cnn_structure.v" Line 991: Assignment to cnn_done ignored, since the identifier is never used
+
+Elaborating module <chipscope_icon>.
+
+Elaborating module <chipscope_ila>.
+WARNING:HDLCompiler:634 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\remote_sources\_\rtl\sd_ddr_vga.v" Line 46: Net <TRIG0[255]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sd_ddr_vga>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\remote_sources\_\rtl\sd_ddr_vga.v".
+WARNING:Xst:647 - Input <reset_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <TRIG0<255:230>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <sd_ddr_vga> synthesized.
+
+Synthesizing Unit <cnn_structure>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\cnn_structure.v".
+INFO:Xst:3210 - "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\cnn_structure.v" line 643: Output port <buffer_en> of the instance <subsampling1_inst2> is unconnected or connected to loadless signal.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer1_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer1_10x10> for signal <buffer1_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer2_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer2_10x10> for signal <buffer2_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer3_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer3_10x10> for signal <buffer3_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer4_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer4_10x10> for signal <buffer4_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer5_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer5_10x10> for signal <buffer5_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer6_10x10>, simulation mismatch.
+    Found 100x9-bit dual-port RAM <Mram_buffer6_10x10> for signal <buffer6_10x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer1_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer1_3x3> for signal <buffer1_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer2_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer2_3x3> for signal <buffer2_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer3_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer3_3x3> for signal <buffer3_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer4_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer4_3x3> for signal <buffer4_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer5_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer5_3x3> for signal <buffer5_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer6_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer6_3x3> for signal <buffer6_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer7_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer7_3x3> for signal <buffer7_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer8_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer8_3x3> for signal <buffer8_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer9_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer9_3x3> for signal <buffer9_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer10_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer10_3x3> for signal <buffer10_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer11_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer11_3x3> for signal <buffer11_3x3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer12_3x3>, simulation mismatch.
+    Found 9x12-bit dual-port RAM <Mram_buffer12_3x3> for signal <buffer12_3x3>.
+    Found 1-bit register for signal <weight_en1>.
+    Found 2-bit register for signal <feature_map_counter1_1>.
+    Found 7-bit register for signal <weight_addr>.
+    Found 2-bit register for signal <bias_addr>.
+    Found 7-bit register for signal <conv1_layer_addr>.
+    Found 1-bit register for signal <weight_en2>.
+    Found 6-bit register for signal <counter2>.
+    Found 2-bit register for signal <counter1>.
+    Found 10-bit register for signal <weight_addr2>.
+    Found 9-bit register for signal <conv1_layer_reg1>.
+    Found 9-bit register for signal <conv1_layer_reg2>.
+    Found 1-bit register for signal <wr_en>.
+    Found 9-bit register for signal <matrix1_1_5>.
+    Found 9-bit register for signal <matrix1_1_4>.
+    Found 9-bit register for signal <matrix1_1_3>.
+    Found 9-bit register for signal <matrix1_1_2>.
+    Found 9-bit register for signal <matrix1_1_1>.
+    Found 9-bit register for signal <matrix1_2_5>.
+    Found 9-bit register for signal <matrix1_2_4>.
+    Found 9-bit register for signal <matrix1_2_3>.
+    Found 9-bit register for signal <matrix1_2_2>.
+    Found 9-bit register for signal <matrix1_2_1>.
+    Found 9-bit register for signal <matrix1_3_5>.
+    Found 9-bit register for signal <matrix1_3_4>.
+    Found 9-bit register for signal <matrix1_3_3>.
+    Found 9-bit register for signal <matrix1_3_2>.
+    Found 9-bit register for signal <matrix1_3_1>.
+    Found 9-bit register for signal <matrix1_4_5>.
+    Found 9-bit register for signal <matrix1_4_4>.
+    Found 9-bit register for signal <matrix1_4_3>.
+    Found 9-bit register for signal <matrix1_4_2>.
+    Found 9-bit register for signal <matrix1_4_1>.
+    Found 9-bit register for signal <matrix1_5_5>.
+    Found 9-bit register for signal <matrix1_5_4>.
+    Found 9-bit register for signal <matrix1_5_3>.
+    Found 9-bit register for signal <matrix1_5_2>.
+    Found 9-bit register for signal <matrix1_5_1>.
+    Found 9-bit register for signal <matrix2_1_5>.
+    Found 9-bit register for signal <matrix2_1_4>.
+    Found 9-bit register for signal <matrix2_1_3>.
+    Found 9-bit register for signal <matrix2_1_2>.
+    Found 9-bit register for signal <matrix2_1_1>.
+    Found 9-bit register for signal <matrix2_2_5>.
+    Found 9-bit register for signal <matrix2_2_4>.
+    Found 9-bit register for signal <matrix2_2_3>.
+    Found 9-bit register for signal <matrix2_2_2>.
+    Found 9-bit register for signal <matrix2_2_1>.
+    Found 9-bit register for signal <matrix2_3_5>.
+    Found 9-bit register for signal <matrix2_3_4>.
+    Found 9-bit register for signal <matrix2_3_3>.
+    Found 9-bit register for signal <matrix2_3_2>.
+    Found 9-bit register for signal <matrix2_3_1>.
+    Found 9-bit register for signal <matrix2_4_5>.
+    Found 9-bit register for signal <matrix2_4_4>.
+    Found 9-bit register for signal <matrix2_4_3>.
+    Found 9-bit register for signal <matrix2_4_2>.
+    Found 9-bit register for signal <matrix2_4_1>.
+    Found 9-bit register for signal <matrix2_5_5>.
+    Found 9-bit register for signal <matrix2_5_4>.
+    Found 9-bit register for signal <matrix2_5_3>.
+    Found 9-bit register for signal <matrix2_5_2>.
+    Found 9-bit register for signal <matrix2_5_1>.
+    Found 7-bit register for signal <buffer_addr1>.
+    Found 2-bit register for signal <feature_map_counter1_2>.
+    Found 1-bit register for signal <conv1_done>.
+    Found 4-bit register for signal <buffer_addr2>.
+    Found 1-bit register for signal <conv2_done>.
+    Found 4-bit register for signal <counter>.
+    Found 7-bit register for signal <flat_addr>.
+    Found 1-bit register for signal <flat_done>.
+    Found 4-bit register for signal <flat_counter1>.
+    Found 4-bit register for signal <flat_counter2>.
+    Found 11-bit register for signal <weight_108x10_addr>.
+    Found 23-bit register for signal <result1_reg>.
+    Found 23-bit register for signal <result2_reg>.
+    Found 23-bit register for signal <result3_reg>.
+    Found 23-bit register for signal <result4_reg>.
+    Found 23-bit register for signal <result5_reg>.
+    Found 23-bit register for signal <result6_reg>.
+    Found 23-bit register for signal <result7_reg>.
+    Found 23-bit register for signal <result8_reg>.
+    Found 23-bit register for signal <result9_reg>.
+    Found 23-bit register for signal <result10_reg>.
+    Found 23-bit register for signal <result1>.
+    Found 23-bit register for signal <result2>.
+    Found 23-bit register for signal <result3>.
+    Found 23-bit register for signal <result4>.
+    Found 23-bit register for signal <result5>.
+    Found 23-bit register for signal <result6>.
+    Found 23-bit register for signal <result7>.
+    Found 23-bit register for signal <result8>.
+    Found 23-bit register for signal <result9>.
+    Found 23-bit register for signal <result10>.
+    Found 7-bit register for signal <fc_addr>.
+    Found 12-bit register for signal <dina>.
+    Found 10-bit register for signal <image_addr>.
+    Found 10-bit adder for signal <image_addr[9]_GND_2_o_add_7_OUT> created at line 103.
+    Found 2-bit adder for signal <feature_map_counter1_1[1]_GND_2_o_add_8_OUT> created at line 108.
+    Found 7-bit adder for signal <weight_addr[6]_GND_2_o_add_25_OUT> created at line 131.
+    Found 7-bit adder for signal <conv1_layer_addr[6]_GND_2_o_add_47_OUT> created at line 157.
+    Found 6-bit adder for signal <counter2[5]_GND_2_o_add_48_OUT> created at line 162.
+    Found 2-bit adder for signal <counter1[1]_GND_2_o_add_50_OUT> created at line 164.
+    Found 10-bit adder for signal <weight_addr2[9]_GND_2_o_add_232_OUT> created at line 453.
+    Found 7-bit adder for signal <buffer_addr1[6]_GND_2_o_add_384_OUT> created at line 665.
+    Found 2-bit adder for signal <feature_map_counter1_2[1]_GND_2_o_add_396_OUT> created at line 681.
+    Found 4-bit adder for signal <buffer_addr2[3]_GND_2_o_add_406_OUT> created at line 750.
+    Found 4-bit adder for signal <counter[3]_GND_2_o_add_409_OUT> created at line 756.
+    Found 7-bit adder for signal <flat_addr[6]_GND_2_o_add_452_OUT> created at line 865.
+    Found 4-bit adder for signal <flat_counter1[3]_GND_2_o_add_455_OUT> created at line 871.
+    Found 4-bit adder for signal <flat_counter2[3]_GND_2_o_add_457_OUT> created at line 876.
+    Found 23-bit adder for signal <result1_reg[22]_dout_amend[22]_add_533_OUT> created at line 999.
+    Found 23-bit adder for signal <result2_reg[22]_dout_amend[22]_add_537_OUT> created at line 1003.
+    Found 23-bit adder for signal <result3_reg[22]_dout_amend[22]_add_541_OUT> created at line 1007.
+    Found 23-bit adder for signal <result4_reg[22]_dout_amend[22]_add_545_OUT> created at line 1011.
+    Found 23-bit adder for signal <result5_reg[22]_dout_amend[22]_add_549_OUT> created at line 1015.
+    Found 23-bit adder for signal <result6_reg[22]_dout_amend[22]_add_553_OUT> created at line 1019.
+    Found 23-bit adder for signal <result7_reg[22]_dout_amend[22]_add_557_OUT> created at line 1023.
+    Found 23-bit adder for signal <result8_reg[22]_dout_amend[22]_add_561_OUT> created at line 1027.
+    Found 23-bit adder for signal <result9_reg[22]_dout_amend[22]_add_565_OUT> created at line 1031.
+    Found 11-bit adder for signal <weight_108x10_addr[10]_GND_2_o_add_568_OUT> created at line 1034.
+    Found 23-bit adder for signal <result10_reg[22]_dout_amend[22]_add_569_OUT> created at line 1035.
+    Found 23-bit adder for signal <result1_reg[22]_GND_2_o_add_570_OUT> created at line 1039.
+    Found 23-bit adder for signal <result2_reg[22]_GND_2_o_add_571_OUT> created at line 1040.
+    Found 23-bit adder for signal <result3_reg[22]_GND_2_o_add_572_OUT> created at line 1041.
+    Found 23-bit adder for signal <result4_reg[22]_GND_2_o_add_573_OUT> created at line 1042.
+    Found 23-bit adder for signal <result5_reg[22]_GND_2_o_add_574_OUT> created at line 1043.
+    Found 23-bit adder for signal <result6_reg[22]_GND_2_o_add_575_OUT> created at line 1044.
+    Found 23-bit adder for signal <result7_reg[22]_GND_2_o_add_576_OUT> created at line 1045.
+    Found 23-bit adder for signal <result8_reg[22]_GND_2_o_add_577_OUT> created at line 1046.
+    Found 23-bit adder for signal <result9_reg[22]_GND_2_o_add_578_OUT> created at line 1047.
+    Found 23-bit adder for signal <result10_reg[22]_GND_2_o_add_579_OUT> created at line 1048.
+    Found 7-bit adder for signal <fc_addr[6]_GND_2_o_add_810_OUT> created at line 1057.
+    Found 16x4-bit Read Only RAM for signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT>
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer_fc>, simulation mismatch.
+    Found 108x12-bit dual-port RAM <Mram_buffer_fc> for signal <buffer_fc>.
+    Found 1-bit 4-to-1 multiplexer for signal <weight_en1_GND_2_o_MUX_61_o> created at line 120.
+    Found 1-bit 39-to-1 multiplexer for signal <weight_en2_GND_2_o_MUX_148_o> created at line 179.
+    Found 2-bit comparator greater for signal <feature_map_counter1_1[1]_PWR_2_o_LessThan_6_o> created at line 101
+    Found 10-bit comparator greater for signal <image_addr[9]_PWR_2_o_LessThan_7_o> created at line 102
+    Found 7-bit comparator greater for signal <weight_addr[6]_GND_2_o_LessThan_13_o> created at line 112
+    Found 7-bit comparator greater for signal <weight_addr[6]_GND_2_o_LessThan_19_o> created at line 121
+    Found 7-bit comparator greater for signal <weight_addr[6]_PWR_2_o_LessThan_25_o> created at line 130
+    Found 6-bit comparator greater for signal <counter2[5]_PWR_2_o_LessThan_46_o> created at line 155
+    Found 7-bit comparator greater for signal <conv1_layer_addr[6]_PWR_2_o_LessThan_47_o> created at line 156
+    Found 2-bit comparator lessequal for signal <counter1[1]_PWR_2_o_LessThan_50_o> created at line 163
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_57_o> created at line 172
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_62_o> created at line 180
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_67_o> created at line 188
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_72_o> created at line 196
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_77_o> created at line 204
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_82_o> created at line 212
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_87_o> created at line 220
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_92_o> created at line 228
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_97_o> created at line 236
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_102_o> created at line 244
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_107_o> created at line 252
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_112_o> created at line 260
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_117_o> created at line 268
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_122_o> created at line 276
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_127_o> created at line 284
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_132_o> created at line 292
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_137_o> created at line 300
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_142_o> created at line 308
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_147_o> created at line 316
+    Found 10-bit comparator greater for signal <weight_addr2[9]_GND_2_o_LessThan_152_o> created at line 324
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_157_o> created at line 332
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_162_o> created at line 340
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_167_o> created at line 348
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_172_o> created at line 356
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_177_o> created at line 364
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_182_o> created at line 372
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_187_o> created at line 380
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_192_o> created at line 388
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_197_o> created at line 396
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_202_o> created at line 404
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_207_o> created at line 412
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_212_o> created at line 420
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_217_o> created at line 428
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_222_o> created at line 436
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_227_o> created at line 444
+    Found 10-bit comparator greater for signal <weight_addr2[9]_PWR_2_o_LessThan_232_o> created at line 452
+    Found 2-bit comparator lessequal for signal <feature_map_counter1_2[1]_PWR_2_o_LessThan_396_o> created at line 680
+    Found 7-bit comparator lessequal for signal <flat_addr[6]_PWR_2_o_LessThan_452_o> created at line 864
+    Found 4-bit comparator greater for signal <flat_counter1[3]_PWR_2_o_LessThan_455_o> created at line 870
+    Found 4-bit comparator lessequal for signal <flat_counter2[3]_PWR_2_o_LessThan_457_o> created at line 875
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_529_o> created at line 994
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_532_o> created at line 997
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_536_o> created at line 1001
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_540_o> created at line 1005
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_544_o> created at line 1009
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_548_o> created at line 1013
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_552_o> created at line 1017
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_556_o> created at line 1021
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_560_o> created at line 1025
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_GND_2_o_LessThan_564_o> created at line 1029
+    Found 11-bit comparator greater for signal <weight_108x10_addr[10]_PWR_2_o_LessThan_568_o> created at line 1033
+    Found 7-bit comparator lessequal for signal <fc_addr[6]_PWR_2_o_LessThan_810_o> created at line 1056
+    Summary:
+	inferred  20 RAM(s).
+	inferred  36 Adder/Subtractor(s).
+	inferred 1042 D-type flip-flop(s).
+	inferred  60 Comparator(s).
+	inferred 121 Multiplexer(s).
+Unit <cnn_structure> synthesized.
+
+Synthesizing Unit <conv2d>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\conv2d.v".
+WARNING:Xst:647 - Input <weight<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <bias<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 225-bit register for signal <n0122[224:0]>.
+    Found 9-bit register for signal <bias_reg>.
+    Found 19-bit register for signal <add0_0>.
+    Found 19-bit register for signal <add0_1>.
+    Found 19-bit register for signal <add0_2>.
+    Found 19-bit register for signal <add0_3>.
+    Found 19-bit register for signal <add0_4>.
+    Found 19-bit register for signal <add0_5>.
+    Found 19-bit register for signal <add0_6>.
+    Found 19-bit register for signal <add0_7>.
+    Found 19-bit register for signal <add0_8>.
+    Found 19-bit register for signal <add0_9>.
+    Found 19-bit register for signal <add0_10>.
+    Found 19-bit register for signal <add0_11>.
+    Found 19-bit register for signal <add0_12>.
+    Found 19-bit register for signal <add1_0>.
+    Found 19-bit register for signal <add1_1>.
+    Found 19-bit register for signal <add1_2>.
+    Found 19-bit register for signal <add1_3>.
+    Found 19-bit register for signal <add1_4>.
+    Found 19-bit register for signal <add1_5>.
+    Found 19-bit register for signal <add1_6>.
+    Found 19-bit register for signal <add2_0>.
+    Found 19-bit register for signal <add2_1>.
+    Found 19-bit register for signal <add2_2>.
+    Found 19-bit register for signal <add2_3>.
+    Found 19-bit register for signal <add3_0>.
+    Found 19-bit register for signal <add3_1>.
+    Found 19-bit register for signal <add4_0>.
+    Found 12-bit register for signal <norm_result>.
+    Found 7-bit register for signal <addr>.
+    Found 8-bit subtractor for signal <GND_12_o_GND_12_o_sub_3_OUT> created at line 49.
+    Found 7-bit adder for signal <addr[6]_GND_12_o_add_1_OUT> created at line 48.
+    Found 19-bit adder for signal <mul_adder_reg1[18]_mul_adder_reg2[18]_add_37_OUT> created at line 120.
+    Found 19-bit adder for signal <mul_adder_reg3[18]_mul_adder_reg4[18]_add_38_OUT> created at line 121.
+    Found 19-bit adder for signal <mul_adder_reg5[18]_mul_adder_reg6[18]_add_39_OUT> created at line 122.
+    Found 19-bit adder for signal <mul_adder_reg7[18]_mul_adder_reg8[18]_add_40_OUT> created at line 123.
+    Found 19-bit adder for signal <mul_adder_reg9[18]_mul_adder_reg10[18]_add_41_OUT> created at line 124.
+    Found 19-bit adder for signal <mul_adder_reg11[18]_mul_adder_reg12[18]_add_42_OUT> created at line 125.
+    Found 19-bit adder for signal <mul_adder_reg13[18]_mul_adder_reg14[18]_add_43_OUT> created at line 126.
+    Found 19-bit adder for signal <mul_adder_reg15[18]_mul_adder_reg16[18]_add_44_OUT> created at line 127.
+    Found 19-bit adder for signal <mul_adder_reg17[18]_mul_adder_reg18[18]_add_45_OUT> created at line 128.
+    Found 19-bit adder for signal <mul_adder_reg19[18]_mul_adder_reg20[18]_add_46_OUT> created at line 129.
+    Found 19-bit adder for signal <mul_adder_reg21[18]_mul_adder_reg22[18]_add_47_OUT> created at line 130.
+    Found 19-bit adder for signal <mul_adder_reg23[18]_mul_adder_reg24[18]_add_48_OUT> created at line 131.
+    Found 19-bit adder for signal <mul_adder_reg25[18]_GND_12_o_add_49_OUT> created at line 132.
+    Found 19-bit adder for signal <add0_0[18]_add0_1[18]_add_64_OUT> created at line 143.
+    Found 19-bit adder for signal <add0_2[18]_add0_3[18]_add_65_OUT> created at line 144.
+    Found 19-bit adder for signal <add0_4[18]_add0_5[18]_add_66_OUT> created at line 145.
+    Found 19-bit adder for signal <add0_6[18]_add0_7[18]_add_67_OUT> created at line 146.
+    Found 19-bit adder for signal <add0_8[18]_add0_9[18]_add_68_OUT> created at line 147.
+    Found 19-bit adder for signal <add0_10[18]_add0_11[18]_add_69_OUT> created at line 148.
+    Found 19-bit adder for signal <add1_0[18]_add1_1[18]_add_78_OUT> created at line 160.
+    Found 19-bit adder for signal <add1_2[18]_add1_3[18]_add_79_OUT> created at line 161.
+    Found 19-bit adder for signal <add1_4[18]_add1_5[18]_add_80_OUT> created at line 162.
+    Found 19-bit adder for signal <add2_0[18]_add2_1[18]_add_86_OUT> created at line 174.
+    Found 19-bit adder for signal <add2_2[18]_add2_3[18]_add_87_OUT> created at line 175.
+    Found 19-bit adder for signal <add3_0[18]_add3_1[18]_add_91_OUT> created at line 185.
+    Found 32-bit comparator lessequal for signal <n0002> created at line 49
+    Summary:
+	inferred  27 Adder/Subtractor(s).
+	inferred 766 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  25 Multiplexer(s).
+Unit <conv2d> synthesized.
+
+Synthesizing Unit <multiply>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\multiply_adder.v".
+    Found 19-bit register for signal <dout>.
+    Found 19-bit adder for signal <PWR_15_o_GND_13_o_add_3_OUT> created at line 38.
+    Found 9x8-bit multiplier for signal <dout_reg> created at line 34.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <multiply> synthesized.
+
+Synthesizing Unit <maxpooling1>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling1.v".
+    Found 1-bit register for signal <wr_en_reg2>.
+    Found 9-bit register for signal <addra>.
+    Found 1-bit register for signal <relu_en>.
+    Found 5-bit register for signal <relu_column>.
+    Found 9-bit register for signal <relu_row>.
+    Found 12-bit register for signal <matrix1_1>.
+    Found 12-bit register for signal <matrix1_2>.
+    Found 12-bit register for signal <matrix2_1>.
+    Found 12-bit register for signal <matrix2_2>.
+    Found 12-bit register for signal <max0>.
+    Found 12-bit register for signal <max1>.
+    Found 12-bit register for signal <max>.
+    Found 1-bit register for signal <relu_en1>.
+    Found 1-bit register for signal <relu_en2>.
+    Found 1-bit register for signal <relu_en3>.
+    Found 1-bit register for signal <buffer_en>.
+    Found 1-bit register for signal <wr_en_reg1>.
+    Found 9-bit adder for signal <addra[8]_GND_15_o_add_2_OUT> created at line 60.
+    Found 5-bit adder for signal <relu_column[4]_GND_15_o_add_5_OUT> created at line 69.
+    Found 9-bit adder for signal <relu_row[8]_GND_15_o_add_7_OUT> created at line 74.
+    Found 10-bit adder for signal <n0161> created at line 94.
+    Found 10-bit adder for signal <n0120> created at line 95.
+    Found 10-bit adder for signal <n0122> created at line 96.
+    Found 10-bit adder for signal <n0124> created at line 97.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer_20x24>, simulation mismatch.
+    Found 480x12-bit dual-port RAM <Mram_buffer_20x24> for signal <buffer_20x24>.
+    Found 5-bit comparator greater for signal <relu_column[4]_PWR_16_o_LessThan_5_o> created at line 68
+    Found 9-bit comparator lessequal for signal <relu_row[8]_PWR_16_o_LessThan_7_o> created at line 73
+    Found 12-bit comparator greater for signal <matrix1_2[11]_matrix1_1[11]_LessThan_46_o> created at line 119
+    Found 12-bit comparator greater for signal <matrix2_2[11]_matrix2_1[11]_LessThan_56_o> created at line 135
+    Found 12-bit comparator greater for signal <max1[11]_max0[11]_LessThan_66_o> created at line 152
+    Summary:
+	inferred   4 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 114 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <maxpooling1> synthesized.
+
+Synthesizing Unit <maxpooling2>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\maxpooling2.v".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer1_6x10>, simulation mismatch.
+    Found 60x12-bit single-port RAM <Mram_buffer1_6x10> for signal <buffer1_6x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer2_6x10>, simulation mismatch.
+    Found 60x12-bit single-port RAM <Mram_buffer2_6x10> for signal <buffer2_6x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer3_6x10>, simulation mismatch.
+    Found 60x12-bit single-port RAM <Mram_buffer3_6x10> for signal <buffer3_6x10>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer4_6x10>, simulation mismatch.
+    Found 60x12-bit single-port RAM <Mram_buffer4_6x10> for signal <buffer4_6x10>.
+    Found 2-bit register for signal <adder_counter>.
+    Found 1-bit register for signal <relu_en>.
+    Found 3-bit register for signal <relu_column>.
+    Found 6-bit register for signal <relu_row>.
+    Found 12-bit register for signal <matrix1_1>.
+    Found 12-bit register for signal <matrix1_2>.
+    Found 12-bit register for signal <matrix2_1>.
+    Found 12-bit register for signal <matrix2_2>.
+    Found 12-bit register for signal <max0>.
+    Found 12-bit register for signal <max1>.
+    Found 12-bit register for signal <max>.
+    Found 1-bit register for signal <relu_en1>.
+    Found 1-bit register for signal <relu_en2>.
+    Found 1-bit register for signal <buffer_en>.
+    Found 6-bit register for signal <addra>.
+    Found 12-bit adder for signal <PWR_17_o_GND_16_o_add_15_OUT> created at line 54.
+    Found 6-bit adder for signal <addra[5]_GND_16_o_add_19_OUT> created at line 74.
+    Found 12-bit adder for signal <n0235> created at line 84.
+    Found 12-bit adder for signal <n0238> created at line 84.
+    Found 12-bit adder for signal <n0241> created at line 84.
+    Found 12-bit adder for signal <n0244> created at line 84.
+    Found 12-bit adder for signal <n0247> created at line 84.
+    Found 12-bit adder for signal <norm_result1[11]_bias_amend[11]_add_36_OUT> created at line 84.
+    Found 2-bit adder for signal <adder_counter[1]_GND_16_o_add_40_OUT> created at line 90.
+    Found 3-bit adder for signal <relu_column[2]_GND_16_o_add_45_OUT> created at line 100.
+    Found 6-bit adder for signal <relu_row[5]_GND_16_o_add_47_OUT> created at line 105.
+    Found 7-bit adder for signal <n0259> created at line 127.
+    Found 7-bit adder for signal <n0194> created at line 128.
+    Found 7-bit adder for signal <n0196> created at line 129.
+    Found 7-bit adder for signal <n0198> created at line 130.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <buffer_6x10>, simulation mismatch.
+    Found 60x12-bit dual-port RAM <Mram_buffer_6x10> for signal <buffer_6x10>.
+    Found 2-bit comparator lessequal for signal <adder_counter[1]_PWR_17_o_LessThan_40_o> created at line 89
+    Found 3-bit comparator greater for signal <relu_column[2]_PWR_17_o_LessThan_45_o> created at line 99
+    Found 6-bit comparator lessequal for signal <relu_row[5]_PWR_17_o_LessThan_47_o> created at line 104
+    Found 12-bit comparator greater for signal <matrix1_2[11]_matrix1_1[11]_LessThan_85_o> created at line 151
+    Found 12-bit comparator greater for signal <matrix2_2[11]_matrix2_1[11]_LessThan_95_o> created at line 167
+    Found 12-bit comparator greater for signal <max1[11]_max0[11]_LessThan_105_o> created at line 185
+    Summary:
+	inferred   8 RAM(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred 105 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  18 Multiplexer(s).
+Unit <maxpooling2> synthesized.
+
+Synthesizing Unit <multiplier>.
+    Related source file is "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\multiplier.v".
+WARNING:Xst:647 - Input <dina<11:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 23-bit register for signal <dout>.
+    Found 23-bit adder for signal <PWR_19_o_GND_18_o_add_3_OUT> created at line 38.
+    Found 11x11-bit multiplier for signal <dout_reg> created at line 34.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <multiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 36
+ 100x9-bit dual-port RAM                               : 6
+ 108x12-bit dual-port RAM                              : 1
+ 16x4-bit single-port Read Only RAM                    : 1
+ 480x12-bit dual-port RAM                              : 8
+ 60x12-bit dual-port RAM                               : 4
+ 60x12-bit single-port RAM                             : 4
+ 9x12-bit dual-port RAM                                : 12
+# Multipliers                                          : 51
+ 11x11-bit multiplier                                  : 1
+ 9x8-bit multiplier                                    : 50
+# Adders/Subtractors                                   : 170
+ 10-bit adder                                          : 10
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 7
+ 19-bit adder                                          : 100
+ 2-bit adder                                           : 4
+ 23-bit adder                                          : 21
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 4
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 3
+ 7-bit adder                                           : 11
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 4
+# Registers                                            : 218
+ 1-bit register                                        : 24
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 24
+ 19-bit register                                       : 104
+ 2-bit register                                        : 5
+ 225-bit register                                      : 2
+ 23-bit register                                       : 21
+ 3-bit register                                        : 1
+ 4-bit register                                        : 4
+ 45-bit register                                       : 10
+ 5-bit register                                        : 2
+ 6-bit register                                        : 3
+ 7-bit register                                        : 7
+ 9-bit register                                        : 8
+# Comparators                                          : 78
+ 10-bit comparator greater                             : 37
+ 11-bit comparator greater                             : 11
+ 12-bit comparator greater                             : 9
+ 2-bit comparator greater                              : 1
+ 2-bit comparator lessequal                            : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator greater                              : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator greater                              : 4
+ 7-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 270
+ 1-bit 2-to-1 multiplexer                              : 77
+ 1-bit 39-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 69
+ 16-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 50
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 1
+ 9-bit 2-to-1 multiplexer                              : 66
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <chipscope_ila.ngc>.
+Reading core <chipscope_icon.ngc>.
+Reading core <ipcore_dir/conv_weight1.ngc>.
+Reading core <ipcore_dir/conv_weight2.ngc>.
+Reading core <ipcore_dir/conv_bias1.ngc>.
+Reading core <ipcore_dir/conv_bias2.ngc>.
+Reading core <ipcore_dir/conv_weight2_1.ngc>.
+Reading core <ipcore_dir/conv_weight2_2.ngc>.
+Reading core <ipcore_dir/image_24x24.ngc>.
+Reading core <ipcore_dir/shift_ram_24.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/shift_ram_10.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/weight_108x10.ngc>.
+Loading core <chipscope_ila> for timing and area information for instance <ila_filter_debug>.
+Loading core <chipscope_icon> for timing and area information for instance <icon_debug>.
+Loading core <conv_weight1> for timing and area information for instance <weight1_inst>.
+Loading core <conv_weight2> for timing and area information for instance <weight2_inst>.
+Loading core <conv_bias1> for timing and area information for instance <bias1_inst>.
+Loading core <conv_bias2> for timing and area information for instance <bias2_inst>.
+Loading core <conv_weight2_1> for timing and area information for instance <weight2_1_inst>.
+Loading core <conv_weight2_2> for timing and area information for instance <weight2_2_inst>.
+Loading core <image_24x24> for timing and area information for instance <image_inst>.
+Loading core <shift_ram_24> for timing and area information for instance <taps0x>.
+Loading core <shift_ram_24> for timing and area information for instance <taps1x>.
+Loading core <shift_ram_24> for timing and area information for instance <taps2x>.
+Loading core <shift_ram_24> for timing and area information for instance <taps3x>.
+Loading core <shift_ram_10> for timing and area information for instance <taps1_0y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps1_1y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps1_2y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps1_3y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps2_0y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps2_1y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps2_2y>.
+Loading core <shift_ram_10> for timing and area information for instance <taps2_3y>.
+Loading core <weight_108x10> for timing and area information for instance <weight_inst>.
+WARNING:Xst:2677 - Node <add4_0_0> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_1> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_2> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_3> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_4> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_5> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <add4_0_6> of sequential type is unconnected in block <feature_map_inst1>.
+WARNING:Xst:2677 - Node <max_9> of sequential type is unconnected in block <subsampling1_inst1>.
+WARNING:Xst:2677 - Node <max_10> of sequential type is unconnected in block <subsampling1_inst1>.
+WARNING:Xst:2677 - Node <add4_0_0> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_1> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_2> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_3> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_4> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_5> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <add4_0_6> of sequential type is unconnected in block <feature_map_inst2>.
+WARNING:Xst:2677 - Node <max_9> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <max_10> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <mul_inst>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <mul_inst>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <mul_inst>.
+WARNING:Xst:2677 - Node <dina_11> of sequential type is unconnected in block <cnn_inst>.
+
+Synthesizing (advanced) Unit <cnn_structure>.
+The following registers are absorbed into accumulator <result1_reg>: 1 register on signal <result1_reg>.
+The following registers are absorbed into accumulator <result2_reg>: 1 register on signal <result2_reg>.
+The following registers are absorbed into accumulator <result3_reg>: 1 register on signal <result3_reg>.
+The following registers are absorbed into accumulator <result4_reg>: 1 register on signal <result4_reg>.
+The following registers are absorbed into accumulator <result5_reg>: 1 register on signal <result5_reg>.
+The following registers are absorbed into accumulator <result6_reg>: 1 register on signal <result6_reg>.
+The following registers are absorbed into accumulator <result7_reg>: 1 register on signal <result7_reg>.
+The following registers are absorbed into accumulator <result8_reg>: 1 register on signal <result8_reg>.
+The following registers are absorbed into accumulator <result9_reg>: 1 register on signal <result9_reg>.
+The following registers are absorbed into accumulator <result10_reg>: 1 register on signal <result10_reg>.
+The following registers are absorbed into counter <feature_map_counter1_1>: 1 register on signal <feature_map_counter1_1>.
+The following registers are absorbed into counter <weight_addr>: 1 register on signal <weight_addr>.
+The following registers are absorbed into counter <counter2>: 1 register on signal <counter2>.
+The following registers are absorbed into counter <weight_addr2>: 1 register on signal <weight_addr2>.
+The following registers are absorbed into counter <feature_map_counter1_2>: 1 register on signal <feature_map_counter1_2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <flat_addr>: 1 register on signal <flat_addr>.
+The following registers are absorbed into counter <flat_counter2>: 1 register on signal <flat_counter2>.
+The following registers are absorbed into counter <weight_108x10_addr>: 1 register on signal <weight_108x10_addr>.
+The following registers are absorbed into counter <conv1_layer_addr>: 1 register on signal <conv1_layer_addr>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <buffer_addr1>: 1 register on signal <buffer_addr1>.
+The following registers are absorbed into counter <flat_counter1>: 1 register on signal <flat_counter1>.
+The following registers are absorbed into counter <buffer_addr2>: 1 register on signal <buffer_addr2>.
+The following registers are absorbed into counter <fc_addr>: 1 register on signal <fc_addr>.
+The following registers are absorbed into counter <image_addr>: 1 register on signal <image_addr>.
+INFO:Xst:3226 - The RAM <Mram_buffer_fc> will be implemented as a BLOCK RAM, absorbing the following register(s): <dina>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 108-word x 12-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <flat_addr>     |          |
+    |     diA            | connected to signal <_n3091>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 108-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <cnn_clk>       | rise     |
+    |     enB            | connected to signal <flat_done>     | high     |
+    |     addrB          | connected to signal <fc_addr>       |          |
+    |     doB            | connected to signal <dina>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer1_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_GND_2_o_equal_386_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_1> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer2_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_GND_2_o_equal_389_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_1> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer3_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_PWR_2_o_equal_392_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_1> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer4_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_GND_2_o_equal_386_o_1> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_2> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer5_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_GND_2_o_equal_389_o_0_1> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_2> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer6_10x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <feature_map_counter1_2[1]_PWR_2_o_equal_392_o_0_1> | high     |
+    |     addrA          | connected to signal <buffer_addr1>  |          |
+    |     diA            | connected to signal <relu_result1_2> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 100-word x 9-bit                    |          |
+    |     addrB          | connected to signal <conv1_layer_addr> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer1_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_equal_418_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer2_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_equal_420_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer3_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_equal_422_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer4_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_MUX_605_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer5_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_equal_426_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer6_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_MUX_607_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer7_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_MUX_608_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer8_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_GND_2_o_MUX_609_o_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer9_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_PWR_2_o_equal_434_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer10_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_PWR_2_o_equal_436_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer11_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_PWR_2_o_equal_438_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer12_3x3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <counter[3]_PWR_2_o_equal_409_o_0_0> | high     |
+    |     addrA          | connected to signal <buffer_addr2>  |          |
+    |     diA            | connected to signal <relu_result2>  |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 9-word x 12-bit                     |          |
+    |     addrB          | connected to signal <flat_counter2[3]_X_2_o_wide_mux_469_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_flat_counter2[3]_X_2_o_wide_mux_469_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <flat_counter2> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <cnn_structure> synthesized (advanced).
+
+Synthesizing (advanced) Unit <conv2d>.
+The following registers are absorbed into counter <addr>: 1 register on signal <addr>.
+Unit <conv2d> synthesized (advanced).
+
+Synthesizing (advanced) Unit <maxpooling1>.
+The following registers are absorbed into accumulator <relu_column>: 1 register on signal <relu_column>.
+The following registers are absorbed into counter <addra>: 1 register on signal <addra>.
+The following registers are absorbed into accumulator <relu_row>: 1 register on signal <relu_row>.
+INFO:Xst:3226 - The RAM <Mram_buffer_20x241> will be implemented as a BLOCK RAM, absorbing the following register(s): <matrix1_2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <cnn_clk>       | rise     |
+    |     enB            | connected to signal <relu_en>       | high     |
+    |     addrB          | connected to signal <n0120>         |          |
+    |     doB            | connected to signal <matrix1_2>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_buffer_20x242> will be implemented as a BLOCK RAM, absorbing the following register(s): <matrix2_1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <cnn_clk>       | rise     |
+    |     enB            | connected to signal <relu_en>       | high     |
+    |     addrB          | connected to signal <n0122>         |          |
+    |     doB            | connected to signal <matrix2_1>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_buffer_20x243> will be implemented as a BLOCK RAM, absorbing the following register(s): <matrix2_2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <cnn_clk>       | rise     |
+    |     enB            | connected to signal <relu_en>       | high     |
+    |     addrB          | connected to signal <n0124>         |          |
+    |     doB            | connected to signal <matrix2_2>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_buffer_20x24> will be implemented as a BLOCK RAM, absorbing the following register(s): <matrix1_1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 480-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <cnn_clk>       | rise     |
+    |     enB            | connected to signal <relu_en>       | high     |
+    |     addrB          | connected to signal <n0161>         |          |
+    |     doB            | connected to signal <matrix1_1>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <maxpooling1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <maxpooling2>.
+The following registers are absorbed into counter <adder_counter>: 1 register on signal <adder_counter>.
+The following registers are absorbed into accumulator <relu_column>: 1 register on signal <relu_column>.
+The following registers are absorbed into accumulator <relu_row>: 1 register on signal <relu_row>.
+The following registers are absorbed into counter <addra>: 1 register on signal <addra>.
+	The following adders/subtractors are grouped into adder tree <Madd_norm_result1[11]_bias_amend[11]_add_36_OUT1> :
+ 	<Madd_n0235> in block <maxpooling2>, 	<Madd_n0238> in block <maxpooling2>, 	<Madd_n0241> in block <maxpooling2>, 	<Madd_n0244> in block <maxpooling2>, 	<Madd_n0247> in block <maxpooling2>, 	<Madd_norm_result1[11]_bias_amend[11]_add_36_OUT> in block <maxpooling2>.
+INFO:Xst:3231 - The small RAM <Mram_buffer_6x10> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_PWR_17_o_equal_27_o_0_0> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1[11]_bias_amend[11]_add_36_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     addrB          | connected to signal <n0259>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_buffer_6x101> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_PWR_17_o_equal_27_o_0_1> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1[11]_bias_amend[11]_add_36_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     addrB          | connected to signal <n0194>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_buffer_6x103> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_PWR_17_o_equal_27_o_0_3> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1[11]_bias_amend[11]_add_36_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     addrB          | connected to signal <n0198>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_buffer_6x102> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_PWR_17_o_equal_27_o_0_2> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1[11]_bias_amend[11]_add_36_OUT> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     addrB          | connected to signal <n0196>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer1_6x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_GND_16_o_equal_21_o_0> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1>  |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer2_6x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_GND_16_o_equal_24_o_0_0> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result1>  |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer3_6x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_GND_16_o_equal_21_o_1> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result2>  |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_buffer4_6x10> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 60-word x 12-bit                    |          |
+    |     clkA           | connected to signal <cnn_clk>       | rise     |
+    |     weA            | connected to signal <adder_counter[1]_GND_16_o_equal_24_o_0_1> | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <norm_result2>  |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <maxpooling2> synthesized (advanced).
+WARNING:Xst:2677 - Node <add4_0_0> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_1> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_2> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_3> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_4> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_5> of sequential type is unconnected in block <conv2d>.
+WARNING:Xst:2677 - Node <add4_0_6> of sequential type is unconnected in block <conv2d>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 36
+ 100x9-bit dual-port distributed RAM                   : 6
+ 108x12-bit dual-port block RAM                        : 1
+ 16x4-bit single-port distributed Read Only RAM        : 1
+ 480x12-bit dual-port block RAM                        : 8
+ 60x12-bit dual-port distributed RAM                   : 4
+ 60x12-bit single-port distributed RAM                 : 4
+ 9x12-bit dual-port distributed RAM                    : 12
+# Multipliers                                          : 51
+ 11x11-bit multiplier                                  : 1
+ 9x8-bit multiplier                                    : 50
+# Adders/Subtractors                                   : 126
+ 12-bit adder                                          : 1
+ 19-bit adder                                          : 100
+ 23-bit adder                                          : 11
+ 6-bit adder                                           : 4
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 8
+# Adder Trees                                          : 1
+ 12-bit / 7-inputs adder tree                          : 1
+# Counters                                             : 22
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 1
+ 2-bit up counter                                      : 4
+ 4-bit up counter                                      : 4
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 7
+ 9-bit up counter                                      : 2
+# Accumulators                                         : 16
+ 23-bit up accumulator                                 : 10
+ 3-bit up accumulator                                  : 1
+ 5-bit up accumulator                                  : 2
+ 6-bit up accumulator                                  : 1
+ 9-bit up accumulator                                  : 2
+# Registers                                            : 3357
+ Flip-Flops                                            : 3357
+# Comparators                                          : 78
+ 10-bit comparator greater                             : 37
+ 11-bit comparator greater                             : 11
+ 12-bit comparator greater                             : 9
+ 2-bit comparator greater                              : 1
+ 2-bit comparator lessequal                            : 3
+ 3-bit comparator greater                              : 1
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator greater                              : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator greater                              : 4
+ 7-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 675
+ 1-bit 2-to-1 multiplexer                              : 534
+ 1-bit 39-to-1 multiplexer                             : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 69
+ 16-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 50
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 1
+ 9-bit 2-to-1 multiplexer                              : 14
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <relu_column_0> (without init value) has a constant value of 0 in block <maxpooling1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_0> (without init value) has a constant value of 0 in block <maxpooling1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_1> (without init value) has a constant value of 0 in block <maxpooling1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_2> (without init value) has a constant value of 0 in block <maxpooling1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_3> (without init value) has a constant value of 0 in block <maxpooling1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <relu_column_0> (without init value) has a constant value of 0 in block <maxpooling2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_0> (without init value) has a constant value of 0 in block <maxpooling2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <relu_row_1> (without init value) has a constant value of 0 in block <maxpooling2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <sd_ddr_vga> ...
+
+Optimizing unit <cnn_structure> ...
+
+Optimizing unit <conv2d> ...
+
+Optimizing unit <multiply> ...
+
+Optimizing unit <maxpooling1> ...
+
+Optimizing unit <maxpooling2> ...
+
+Optimizing unit <multiplier> ...
+WARNING:Xst:2677 - Node <relu_en1> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <relu_en2> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <relu_en3> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <buffer_en> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <max_9> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <max_10> of sequential type is unconnected in block <subsampling1_inst2>.
+WARNING:Xst:2677 - Node <max_9> of sequential type is unconnected in block <subsampling1_inst1>.
+WARNING:Xst:2677 - Node <max_10> of sequential type is unconnected in block <subsampling1_inst1>.
+WARNING:Xst:2677 - Node <dout_0> of sequential type is unconnected in block <mul_inst>.
+WARNING:Xst:2677 - Node <dout_1> of sequential type is unconnected in block <mul_inst>.
+WARNING:Xst:2677 - Node <dout_2> of sequential type is unconnected in block <mul_inst>.
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst25> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst24> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst23> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst22> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst21> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst20> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst19> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst18> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst17> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst16> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst15> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst14> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst13> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst12> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst11> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst10> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst9> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst8> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst7> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst6> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst5> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst4> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst3> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst2> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst1> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst25> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst24> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst23> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst22> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst21> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst20> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst19> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst18> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst17> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst16> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst15> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst14> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst13> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst12> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst11> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst10> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst9> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst8> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst7> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst6> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst5> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst4> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst3> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst2> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <dout_17> in Unit <mul_inst1> is equivalent to the following FF/Latch, which will be removed : <dout_18> 
+INFO:Xst:2261 - The FF/Latch <relu_row_2> in Unit <subsampling2_inst> is equivalent to the following FF/Latch, which will be removed : <relu_row_4> 
+INFO:Xst:2261 - The FF/Latch <relu_row_3> in Unit <subsampling2_inst> is equivalent to the following FF/Latch, which will be removed : <relu_row_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sd_ddr_vga, actual ratio is 9.
+FlipFlop cnn_inst/weight_addr2_6 has been replicated 1 time(s)
+FlipFlop cnn_inst/weight_addr2_7 has been replicated 1 time(s)
+FlipFlop cnn_inst/weight_addr2_8 has been replicated 1 time(s)
+FlipFlop cnn_inst/weight_addr2_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <feature_map_inst1> :
+	Found 3-bit shift register for signal <add2_3_0>.
+	Found 3-bit shift register for signal <add2_3_1>.
+	Found 3-bit shift register for signal <add2_3_2>.
+	Found 3-bit shift register for signal <add2_3_3>.
+	Found 3-bit shift register for signal <add2_3_4>.
+	Found 3-bit shift register for signal <add2_3_5>.
+	Found 3-bit shift register for signal <add2_3_6>.
+	Found 3-bit shift register for signal <add2_3_7>.
+	Found 3-bit shift register for signal <add2_3_8>.
+	Found 3-bit shift register for signal <add2_3_9>.
+	Found 3-bit shift register for signal <add2_3_10>.
+	Found 3-bit shift register for signal <add2_3_11>.
+	Found 3-bit shift register for signal <add2_3_12>.
+	Found 3-bit shift register for signal <add2_3_13>.
+	Found 3-bit shift register for signal <add2_3_14>.
+	Found 3-bit shift register for signal <add2_3_15>.
+	Found 3-bit shift register for signal <add2_3_16>.
+	Found 3-bit shift register for signal <add2_3_17>.
+	Found 3-bit shift register for signal <add2_3_18>.
+	Found 2-bit shift register for signal <norm_result_0>.
+	Found 2-bit shift register for signal <norm_result_1>.
+	Found 2-bit shift register for signal <norm_result_2>.
+	Found 2-bit shift register for signal <norm_result_3>.
+	Found 2-bit shift register for signal <norm_result_4>.
+	Found 2-bit shift register for signal <norm_result_5>.
+	Found 2-bit shift register for signal <norm_result_6>.
+	Found 2-bit shift register for signal <norm_result_7>.
+	Found 2-bit shift register for signal <norm_result_8>.
+	Found 2-bit shift register for signal <norm_result_9>.
+	Found 2-bit shift register for signal <norm_result_10>.
+	Found 2-bit shift register for signal <norm_result_11>.
+Unit <feature_map_inst1> processed.
+
+Processing Unit <feature_map_inst2> :
+	Found 3-bit shift register for signal <add2_3_0>.
+	Found 3-bit shift register for signal <add2_3_1>.
+	Found 3-bit shift register for signal <add2_3_2>.
+	Found 3-bit shift register for signal <add2_3_3>.
+	Found 3-bit shift register for signal <add2_3_4>.
+	Found 3-bit shift register for signal <add2_3_5>.
+	Found 3-bit shift register for signal <add2_3_6>.
+	Found 3-bit shift register for signal <add2_3_7>.
+	Found 3-bit shift register for signal <add2_3_8>.
+	Found 3-bit shift register for signal <add2_3_9>.
+	Found 3-bit shift register for signal <add2_3_10>.
+	Found 3-bit shift register for signal <add2_3_11>.
+	Found 3-bit shift register for signal <add2_3_12>.
+	Found 3-bit shift register for signal <add2_3_13>.
+	Found 3-bit shift register for signal <add2_3_14>.
+	Found 3-bit shift register for signal <add2_3_15>.
+	Found 3-bit shift register for signal <add2_3_16>.
+	Found 3-bit shift register for signal <add2_3_17>.
+	Found 3-bit shift register for signal <add2_3_18>.
+	Found 2-bit shift register for signal <norm_result_0>.
+	Found 2-bit shift register for signal <norm_result_1>.
+	Found 2-bit shift register for signal <norm_result_2>.
+	Found 2-bit shift register for signal <norm_result_3>.
+	Found 2-bit shift register for signal <norm_result_4>.
+	Found 2-bit shift register for signal <norm_result_5>.
+	Found 2-bit shift register for signal <norm_result_6>.
+	Found 2-bit shift register for signal <norm_result_7>.
+	Found 2-bit shift register for signal <norm_result_8>.
+	Found 2-bit shift register for signal <norm_result_9>.
+	Found 2-bit shift register for signal <norm_result_10>.
+	Found 2-bit shift register for signal <norm_result_11>.
+Unit <feature_map_inst2> processed.
+
+Processing Unit <subsampling1_inst1> :
+	Found 2-bit shift register for signal <wr_en_reg2>.
+	Found 4-bit shift register for signal <buffer_en>.
+Unit <subsampling1_inst1> processed.
+
+Processing Unit <subsampling1_inst2> :
+	Found 2-bit shift register for signal <wr_en_reg2>.
+Unit <subsampling1_inst2> processed.
+
+Processing Unit <subsampling2_inst> :
+	Found 3-bit shift register for signal <buffer_en>.
+Unit <subsampling2_inst> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3513
+ Flip-Flops                                            : 3513
+# Shift Registers                                      : 66
+ 2-bit shift register                                  : 26
+ 3-bit shift register                                  : 39
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sd_ddr_vga.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9664
+#      BUF                         : 1
+#      GND                         : 80
+#      INV                         : 908
+#      LUT1                        : 333
+#      LUT2                        : 1364
+#      LUT3                        : 1090
+#      LUT4                        : 268
+#      LUT5                        : 206
+#      LUT6                        : 341
+#      MUXCY                       : 2327
+#      MUXCY_L                     : 193
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      MUXF7                       : 16
+#      MUXF8                       : 2
+#      VCC                         : 80
+#      XORCY                       : 2452
+# FlipFlops/Latches                : 4912
+#      FD                          : 2760
+#      FDC                         : 9
+#      FDCE                        : 16
+#      FDE                         : 1367
+#      FDP                         : 514
+#      FDR                         : 66
+#      FDRE                        : 169
+#      FDS                         : 10
+#      LDC                         : 1
+# RAMS                             : 158
+#      RAM32M                      : 24
+#      RAM64M                      : 52
+#      RAM64X1S                    : 48
+#      RAMB16BWER                  : 16
+#      RAMB8BWER                   : 18
+# Shift Registers                  : 592
+#      SRL16                       : 256
+#      SRL16E                      : 1
+#      SRLC16E                     : 177
+#      SRLC32E                     : 158
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      OBUF                        : 4
+# DSPs                             : 51
+#      DSP48A1                     : 51
+# Others                           : 1
+#      BSCAN_SPARTAN6              : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4912  out of  54576     9%  
+ Number of Slice LUTs:                 5454  out of  27288    19%  
+    Number used as Logic:              4510  out of  27288    16%  
+    Number used as Memory:              944  out of   6408    14%  
+       Number used as RAM:              352
+       Number used as SRL:              592
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7404
+   Number with an unused Flip Flop:    2492  out of   7404    33%  
+   Number with an unused LUT:          1950  out of   7404    26%  
+   Number of fully used LUT-FF pairs:  2962  out of   7404    40%  
+   Number of unique control sets:       210
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   5  out of    218     2%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               25  out of    116    21%  
+    Number using Block RAM only:         25
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                     51  out of     58    87%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                      | Clock buffer(FF name)                                                                                                                            | Load  |
+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk_50M                                                                           | BUFGP                                                                                                                                            | 5408  |
+cnn_inst/weight2_1_inst/N1                                                        | NONE(cnn_inst/weight2_1_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 1     |
+cnn_inst/weight2_2_inst/N1                                                        | NONE(cnn_inst/weight2_2_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 1     |
+cnn_inst/image_inst/N1                                                            | NONE(cnn_inst/image_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)     | 1     |
+cnn_inst/weight_inst/N1                                                           | NONE(cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)    | 3     |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                 | BUFG                                                                                                                                             | 267   |
+icon_debug/CONTROL0<13>(icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)                                                                                     | 1     |
+icon_debug/U0/iUPDATE_OUT                                                         | NONE(icon_debug/U0/U_ICON/U_iDATA_CMD)                                                                                                           | 1     |
+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 9.684ns (Maximum Frequency: 103.267MHz)
+   Minimum input arrival time before clock: 8.660ns
+   Maximum output required time after clock: 0.525ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50M'
+  Clock period: 9.684ns (frequency: 103.267MHz)
+  Total number of paths / destination ports: 722502 / 8556
+-------------------------------------------------------------------------
+Delay:               9.684ns (Levels of Logic = 8)
+  Source:            cnn_inst/weight_addr2_4 (FF)
+  Destination:       cnn_inst/weight_addr2_0 (FF)
+  Source Clock:      clk_50M rising
+  Destination Clock: clk_50M rising
+
+  Data Path: cnn_inst/weight_addr2_4 to cnn_inst/weight_addr2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             44   0.525   1.829  weight_addr2_4 (weight_addr2_4)
+     LUT4:I2->O            3   0.250   0.766  PWR_2_o_weight_addr2[9]_AND_27_o4311 (PWR_2_o_weight_addr2[9]_AND_27_o431)
+     LUT5:I4->O            1   0.254   0.682  GND_2_o_weight_addr2[9]_AND_7_o1 (GND_2_o_weight_addr2[9]_AND_7_o1)
+     LUT6:I5->O            2   0.254   0.726  GND_2_o_weight_addr2[9]_AND_7_o4 (GND_2_o_weight_addr2[9]_AND_7_o)
+     LUT6:I5->O            1   0.254   0.682  _n2201_inv15 (_n2201_inv17)
+     LUT6:I5->O            1   0.254   0.682  _n2201_inv16 (_n2201_inv18)
+     LUT5:I4->O            1   0.254   0.682  _n2201_inv25 (_n2201_inv27)
+     LUT5:I4->O           10   0.254   1.008  _n2201_inv26_rstpot (_n2201_inv26_rstpot)
+     LUT3:I2->O            1   0.254   0.000  weight_addr2_0_dpot (weight_addr2_0_dpot)
+     FDE:D                     0.074          weight_addr2_0
+    ----------------------------------------
+    Total                      9.684ns (2.627ns logic, 7.057ns route)
+                                       (27.1% logic, 72.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 9.265ns (frequency: 107.933MHz)
+  Total number of paths / destination ports: 4244 / 556
+-------------------------------------------------------------------------
+Delay:               9.265ns (Levels of Logic = 8)
+  Source:            ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[9].u_ramb18/U_RAMB18 (RAM)
+  Destination:       icon_debug/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: ila_filter_debug/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[9].u_ramb18/U_RAMB18 to icon_debug/U0/U_ICON/U_TDO_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA7    1   2.100   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_S6.U_CS_BRAM_CASCADE_S6/I_DEPTH_LTEQ_16K.U_SBRAM_0/I_B18KGT0.G_RAMB18[9].u_ramb18/U_RAMB18 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_data<169>)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_145)
+     LUT6:I2->O            1   0.254   0.958  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_91)
+     LUT6:I2->O            1   0.254   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_41 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_4)
+     MUXF7:I0->O           1   0.163   0.790  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_2_f7 (U0/I_NO_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.250   0.790  U0/I_NO_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'ila_filter_debug:CONTROL<3>'
+     begin scope: 'icon_debug:CONTROL0<3>'
+     LUT6:I4->O            1   0.250   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O11 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.074          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      9.265ns (3.853ns logic, 5.412ns route)
+                                       (41.6% logic, 58.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'icon_debug/U0/iUPDATE_OUT'
+  Clock period: 2.300ns (frequency: 434.783MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.300ns (Levels of Logic = 1)
+  Source:            icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      icon_debug/U0/iUPDATE_OUT rising
+  Destination Clock: icon_debug/U0/iUPDATE_OUT rising
+
+  Data Path: icon_debug/U0/U_ICON/U_iDATA_CMD to icon_debug/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.525   0.765  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.255   0.681  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.074          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.300ns (0.854ns logic, 1.446ns route)
+                                       (37.1% logic, 62.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 302 / 291
+-------------------------------------------------------------------------
+Offset:              6.596ns (Levels of Logic = 5)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE (FF)
+  Destination Clock: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[0].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    3   0.000   0.766  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.254   1.796  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O            3   0.254   0.874  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_LCE (CONTROL0<4>)
+     end scope: 'icon_debug:CONTROL0<4>'
+     begin scope: 'ila_filter_debug:CONTROL<4>'
+     LUT2:I0->O            1   0.250   0.681  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE)
+     INV:I->O             10   0.255   1.007  U0/I_NO_D.U_ILA/U_STAT/U_STATCMD_n (U0/I_NO_D.U_ILA/U_STAT/iSTATCMD_CE_n)
+     FDRE:R                    0.459          U0/I_NO_D.U_ILA/U_STAT/U_STAT_CNT/G[9].U_FDRE
+    ----------------------------------------
+    Total                      6.596ns (1.472ns logic, 5.124ns route)
+                                       (22.3% logic, 77.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50M'
+  Total number of paths / destination ports: 521 / 521
+-------------------------------------------------------------------------
+Offset:              8.660ns (Levels of Logic = 4)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       ila_filter_debug/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2 (FF)
+  Destination Clock: clk_50M rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to ila_filter_debug/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[0].I_IN_RANGE.U_GAND_DLY2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    3   0.000   0.766  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.254   1.796  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O          320   0.254   2.438  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE (CONTROL0<20>)
+     end scope: 'icon_debug:CONTROL0<20>'
+     begin scope: 'ila_filter_debug:CONTROL<20>'
+     BUF:I->O            321   0.255   2.438  CONTROL<20>_1 (CONTROL<20>_1)
+     FDP:PRE                   0.459          U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_CS_GANDX.U_CS_GANDX_SRL/I_S6.U_CS_GANDX_SRL_S6/G_GAND_DLY2[9].I_IN_RANGE.U_GAND_DLY2
+    ----------------------------------------
+    Total                      8.660ns (1.222ns logic, 7.438ns route)
+                                       (14.1% logic, 85.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'icon_debug/U0/iUPDATE_OUT'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.120ns (Levels of Logic = 1)
+  Source:            icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL (PAD)
+  Destination:       icon_debug/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination Clock: icon_debug/U0/iUPDATE_OUT rising
+
+  Data Path: icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL to icon_debug/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL     2   0.000   0.725  U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/U_ICON/iSEL)
+     INV:I->O              1   0.255   0.681  U0/U_ICON/U_iSEL_n (U0/U_ICON/iSEL_n)
+     FDC:CLR                   0.459          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.120ns (0.714ns logic, 1.406ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.525ns (Levels of Logic = 0)
+  Source:            icon_debug/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: icon_debug/U0/U_ICON/U_TDO_reg to icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.525   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN6:TDO         0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_S6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
+    ----------------------------------------
+    Total                      0.525ns (0.525ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_50M
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk_50M                                          |    9.684|         |         |         |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    9.758|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/CONTROL0<13>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50M        |         |         |    2.244|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+clk_50M                                          |    4.067|         |         |         |
+icon_debug/CONTROL0<13>                          |         |    4.308|         |         |
+icon_debug/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    9.265|         |         |         |
+icon_debug/U0/iUPDATE_OUT                        |    2.958|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock icon_debug/U0/iUPDATE_OUT
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+icon_debug/U0/iUPDATE_OUT|    2.300|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.98 secs
+ 
+--> 
+
+Total memory usage is 403392 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :   86 (   0 filtered)
+

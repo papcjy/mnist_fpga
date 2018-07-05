@@ -1,0 +1,14 @@
+C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.ngc 1502199490
+ipcore_dir/conv_weight1.ngc 1500118949
+ipcore_dir/conv_weight2.ngc 1500119021
+ipcore_dir/conv_bias1.ngc 1500184751
+ipcore_dir/conv_bias2.ngc 1500184840
+ipcore_dir/conv_weight2_1.ngc 1502104040
+ipcore_dir/conv_weight2_2.ngc 1502104226
+ipcore_dir/image_24x24.ngc 1502199434
+ipcore_dir/shift_ram_24.ngc 1499911724
+ipcore_dir/shift_ram_10.ngc 1500255918
+ipcore_dir/weight_108x10.ngc 1502159121
+C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga/chipscope_ila.ngc 1446622726
+C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga/chipscope_icon.ngc 1446622724
+OK

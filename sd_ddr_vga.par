@@ -1,0 +1,284 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-AVII1NE::  Tue Aug 08 21:39:40 2017
+
+par -w -intstyle ise -ol high -mt off sd_ddr_vga_map.ncd sd_ddr_vga.ncd
+sd_ddr_vga.pcf 
+
+
+Constraints file: sd_ddr_vga.pcf.
+Loading device for application Rf_Device from file '6slx45.nph' in environment D:\Xilinx\14.7\ISE_DS\ISE\.
+   "sd_ddr_vga" is an NCD, version 3.2, device xc6slx45, package csg324, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 4,930 out of  54,576    9%
+    Number used as Flip Flops:               4,911
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               18
+  Number of Slice LUTs:                      5,012 out of  27,288   18%
+    Number used as logic:                    3,780 out of  27,288   13%
+      Number using O6 output only:           1,915
+      Number using O5 output only:             304
+      Number using O5 and O6:                1,561
+      Number used as ROM:                        0
+    Number used as Memory:                     765 out of   6,408   11%
+      Number used as Dual Port RAM:            304
+        Number using O6 output only:           208
+        Number using O5 output only:             0
+        Number using O5 and O6:                 96
+      Number used as Single Port RAM:           48
+        Number using O6 output only:            48
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:           413
+        Number using O6 output only:           234
+        Number using O5 output only:             0
+        Number using O5 and O6:                179
+    Number used exclusively as route-thrus:    467
+      Number with same-slice register load:    436
+      Number with same-slice carry load:        31
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,726 out of   6,822   25%
+  Number of MUXCYs used:                     2,900 out of  13,644   21%
+  Number of LUT Flip Flop pairs used:        5,770
+    Number with an unused Flip Flop:         2,012 out of   5,770   34%
+    Number with an unused LUT:                 758 out of   5,770   13%
+    Number of fully used LUT-FF pairs:       3,000 out of   5,770   51%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  54,576    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         6 out of     218    2%
+    Number of LOCed IOBs:                        6 out of       6  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        16 out of     116   13%
+  Number of RAMB8BWERs:                         18 out of     232    7%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                           51 out of      58   87%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+WARNING:Par:288 - The signal reset_n_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x101_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1013_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1011_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x104_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1023_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1014_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x107_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer11_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x102_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1012_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1032_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1034_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1024_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer12_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer8_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer10_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer3_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer2_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer1_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer12_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer4_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x105_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1021_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1033_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1022_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/subsampling2_inst/Mram_buffer_6x1031_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer7_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer7_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer8_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer9_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer10_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer9_3x31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer11_3x32_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer5_10x106_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal cnn_inst/Mram_buffer6_10x103_RAMD_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 32220 unrouted;      REAL time: 6 secs 
+
+Phase  2  : 19396 unrouted;      REAL time: 7 secs 
+
+Phase  3  : 5140 unrouted;      REAL time: 19 secs 
+
+Phase  4  : 5140 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+
+Updating file: sd_ddr_vga.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 29 secs 
+Total REAL time to Router completion: 29 secs 
+Total CPU time to Router completion: 29 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|       clk_50M_BUFGP | BUFGMUX_X3Y13| No   | 1223 |  0.067     |  1.775      |
++---------------------+--------------+------+------+------------+-------------+
+|         CONTROL0<0> |  BUFGMUX_X2Y3| No   |   93 |  0.037     |  1.748      |
++---------------------+--------------+------+------+------------+-------------+
+|icon_debug/U0/iUPDAT |              |      |      |            |             |
+|               E_OUT |         Local|      |    1 |  0.000     |  1.718      |
++---------------------+--------------+------+------+------------+-------------+
+|        CONTROL0<13> |         Local|      |    5 |  0.000     |  0.736      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     6.331ns|    13.669ns|       0|           0
+  pin" 50 MHz HIGH 50%                      | HOLD        |     0.228ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 77 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 30 secs 
+Total CPU time to PAR completion: 31 secs 
+
+Peak Memory Usage:  575 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 79
+Number of info messages: 0
+
+Writing design to file sd_ddr_vga.ncd
+
+
+
+PAR done!

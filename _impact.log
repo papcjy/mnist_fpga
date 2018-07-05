@@ -1,0 +1,187 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Tue Aug 08 21:42:45 2017
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project: 'C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\\auto_project.ipf' alreadyexists.
+Original project has been renamed to'C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\\auto_project_1.ipf'.
+Project: C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\\auto_project.ipf created.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addConfigDevice  -name "sd_ddr_vga" -path"C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\"
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setAttribute -configdevice -attr multibootBpiType -value ""
+// *** BATCH CMD : addDesign -version 0 -name "0"
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setAttribute -configdevice -attr compressed -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr autoSize -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr fileFormat -value "mcs"
+// *** BATCH CMD : setAttribute -configdevice -attr fillValue -value "FF"
+// *** BATCH CMD : setAttribute -configdevice -attr swapBit -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr dir -value "UP"
+// *** BATCH CMD : setAttribute -configdevice -attr multiboot -value "FALSE"
+// *** BATCH CMD : setAttribute -configdevice -attr spiSelected -value "TRUE"
+// *** BATCH CMD : addPromDevice -p 1 -size 16384 -name 16M
+'1': Added Device 16M successfully.
+----------------------------------------------------------------------
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : addDeviceChain -index 0
+Override chain at index 0.
+Overriding chain at index 0.
+// *** BATCH CMD : setSubmode -pffspi
+// *** BATCH CMD : setMode -pff
+------------------------  GUI: Wizard Data Report  ---------------------------
+      Compression : false
+      Fill Value : FF
+      Output Format : mcs
+      Swap Bits : false
+      LoadDirection : UP
+      PROM Basename : sd_ddr_vga
+      File Location : C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\/
+      Auto Select : false
+      Number of Revisions : 1
+      Number of PROMs : 1
+      PROM Name : 16M   PROM Size : 16777216 bits
+-------------------------- END of Report ----------------------------
+// *** BATCH CMD : setAttribute -design -attr name -value "0000"
+// *** BATCH CMD : addDevice -p 1 -file"C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/sd_ddr_vga.bit"
+'1': Loading file 'C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/sd_ddr_vga.bit' ...
+INFO:iMPACT - Elapsed time =      0 sec.
+done.
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+Add one device.16af2eINFO:iMPACT - Current time: 2017/8/8 21:43:11
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setSubmode -pffspi
+Total configuration bit size = 11890720  bits.
+Total configuration byte size = 1486340 bytes.
+// *** BATCH CMD : generate
+0x16ae04 (1486340) bytes loaded up from 0x0
+Using user-specified prom size of 16384K
+Writing file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.mcs".
+Writing file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.prm".
+Writing file "C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\sd_ddr_vga.cfi".
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: found 1 device(s).
+INFO:iMPACT - Digilent Plugin: opening device: "JtagHs1", SN:210512180023
+INFO:iMPACT - Digilent Plugin: User Name: JtagHs1
+INFO:iMPACT - Digilent Plugin: Product Name: Digilent JTAG-HS1
+INFO:iMPACT - Digilent Plugin: Serial Number: 210512180023
+INFO:iMPACT - Digilent Plugin: Product ID: 30900152
+INFO:iMPACT - Digilent Plugin: Firmware Version: 0108
+INFO:iMPACT - Digilent Plugin: JTAG Port Number: 0
+INFO:iMPACT - Digilent Plugin: JTAG Clock Frequency: 10000000 Hz
+Attempting to identify devices in the boundary-scan chain configuration...
+INFO:iMPACT - Current time: 2017/8/8 21:43:15
+// *** BATCH CMD : Identify -inferir 
+PROGRESS_START - Starting Operation.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc6slx45, Version : 4
+INFO:iMPACT:1777 - 
+   Reading D:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx45.bsd...
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/sd_ddr_vga.bit"
+'1': Loading file 'C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/sd_ddr_vga.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = 1.
+INFO:iMPACT:501 - '1': Added Device xc6slx45 successfully.
+----------------------------------------------------------------------
+Selected part: W25Q128BV
+// *** BATCH CMD : attachflash -position 1 -spi "W25Q128BV"
+Unprotect sectors: FALSE
+// *** BATCH CMD : assignfiletoattachedflash -position 1 -file"C:/Users/zd/Desktop/mnist_fpga/sd_ddr_vga/sd_ddr_vga.mcs"
+INFO:iMPACT - Current time: 2017/8/8 21:43:44
+// *** BATCH CMD : Program -p 1 -dataWidth 1 -spionly -e -v -loadfpga 
+Maximum TCK operating frequency for this device chain: 25000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': SPI access core not detected. SPI access core will be downloaded to thedevice to enable operations.
+INFO:iMPACT - Downloading core file   D:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/xc6slx45_spi.cor.
+PROGRESS_START - Starting Operation.
+'1': Downloading core...
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:2492 - '1': Completed downloading core to device.
+'1': IDCODE is 'ef4018' (in hex).
+'1': ID Check passed.
+'1': IDCODE is 'ef4018' (in hex).
+'1': ID Check passed.
+'1': Erasing Device.
+'1': Using Sector Erase.
+'1': Erasing non-volatile quad-enable bit...
+'1': Programming Flash.
+'1': Reading device contents...
+done.
+'1': Verification completed.
+'1':Programming in x1 mode.
+W25Q128BV Status Register Contents = 0x0000.
+QUAD ENABLE                                       :         0
+STATUS REGISTER PROTECT 1                         :         0
+STATUS REGISTER PROTECT 0                         :         0
+SECTOR PROTECT                                    :         0
+TOP/BOTTOM PROTECT                                :         0
+BLOCK PROTECT BIT 2                               :         0
+BLOCK PROTECT BIT 1                               :         0
+BLOCK PROTECT BIT 0                               :         0
+'1': Programmed successfully.
+INFO:iMPACT - '1': Flash was programmed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     59 sec.
+Project: 'C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\\auto_project.ipf' created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   C:\Users\zd\Desktop\mnist_fpga\sd_ddr_vga\webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : deletePromDevice -position 1
+// *** BATCH CMD : setCurrentDesign -version 0
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : deleteDesign -version 0
+// *** BATCH CMD : setCurrentDesign -version -1

@@ -1,0 +1,805 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'sd_ddr_vga'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-2 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o sd_ddr_vga_map.ncd sd_ddr_vga.ngd sd_ddr_vga.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Tue Aug 08 21:38:21 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   78
+Slice Logic Utilization:
+  Number of Slice Registers:                 4,930 out of  54,576    9%
+    Number used as Flip Flops:               4,911
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               18
+  Number of Slice LUTs:                      5,012 out of  27,288   18%
+    Number used as logic:                    3,780 out of  27,288   13%
+      Number using O6 output only:           1,915
+      Number using O5 output only:             304
+      Number using O5 and O6:                1,561
+      Number used as ROM:                        0
+    Number used as Memory:                     765 out of   6,408   11%
+      Number used as Dual Port RAM:            304
+        Number using O6 output only:           208
+        Number using O5 output only:             0
+        Number using O5 and O6:                 96
+      Number used as Single Port RAM:           48
+        Number using O6 output only:            48
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:           413
+        Number using O6 output only:           234
+        Number using O5 output only:             0
+        Number using O5 and O6:                179
+    Number used exclusively as route-thrus:    467
+      Number with same-slice register load:    436
+      Number with same-slice carry load:        31
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,726 out of   6,822   25%
+  Number of MUXCYs used:                     2,900 out of  13,644   21%
+  Number of LUT Flip Flop pairs used:        5,770
+    Number with an unused Flip Flop:         2,012 out of   5,770   34%
+    Number with an unused LUT:                 758 out of   5,770   13%
+    Number of fully used LUT-FF pairs:       3,000 out of   5,770   51%
+    Number of unique control sets:             169
+    Number of slice register sites lost
+      to control set restrictions:             800 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         6 out of     218    2%
+    Number of LOCed IOBs:                        6 out of       6  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        16 out of     116   13%
+  Number of RAMB8BWERs:                         18 out of     232    7%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                           51 out of      58   87%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.32
+
+Peak Memory Usage:  648 MB
+Total REAL time to MAP completion:  1 mins 17 secs 
+Total CPU time to MAP completion:   1 mins 17 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL0<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x101_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x104_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1013_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1011_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x104_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1023_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1014_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x107_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer11_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x102_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x105_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1012_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1032_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1034_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1024_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer12_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer8_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer10_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer3_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer2_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer1_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer12_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer4_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x105_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x106_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1021_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1033_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1022_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cnn_inst/subsampling2_inst/Mram_buffer_6x1031_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer7_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer7_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer8_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer9_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer10_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer9_3x31_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer11_3x32_RAMD_D1_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer5_10x106_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <cnn_inst/Mram_buffer6_10x103_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network CONTROL0<35> has no load.
+INFO:LIT:395 - The above info message is repeated 70 more times for the
+   following (max. 5 shown):
+   CONTROL0<34>,
+   CONTROL0<33>,
+   CONTROL0<32>,
+   CONTROL0<31>,
+   CONTROL0<30>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  53 block(s) removed
+ 417 block(s) optimized away
+  87 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "cnn_inst/subsampling2_inst/ADDERTREE_INTERNAL_Madd211" (ROM)
+removed.
+Loadless block "cnn_inst/subsampling2_inst/ADDERTREE_INTERNAL_Madd411" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block "icon_debug/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block
+"ila_filter_debug/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B" (ROM)
+removed.
+The signal "CONTROL0<35>" is sourceless and has been removed.
+The signal "CONTROL0<34>" is sourceless and has been removed.
+The signal "CONTROL0<33>" is sourceless and has been removed.
+The signal "CONTROL0<32>" is sourceless and has been removed.
+The signal "CONTROL0<31>" is sourceless and has been removed.
+The signal "CONTROL0<30>" is sourceless and has been removed.
+The signal "CONTROL0<29>" is sourceless and has been removed.
+The signal "CONTROL0<28>" is sourceless and has been removed.
+The signal "CONTROL0<27>" is sourceless and has been removed.
+The signal "CONTROL0<26>" is sourceless and has been removed.
+The signal "CONTROL0<25>" is sourceless and has been removed.
+The signal "CONTROL0<24>" is sourceless and has been removed.
+The signal "CONTROL0<23>" is sourceless and has been removed.
+The signal "CONTROL0<22>" is sourceless and has been removed.
+The signal "CONTROL0<21>" is sourceless and has been removed.
+The signal "CONTROL0<19>" is sourceless and has been removed.
+The signal "CONTROL0<18>" is sourceless and has been removed.
+The signal "CONTROL0<17>" is sourceless and has been removed.
+The signal "CONTROL0<16>" is sourceless and has been removed.
+The signal "CONTROL0<15>" is sourceless and has been removed.
+The signal "CONTROL0<11>" is sourceless and has been removed.
+The signal "CONTROL0<10>" is sourceless and has been removed.
+The signal "CONTROL0<7>" is sourceless and has been removed.
+The signal "cnn_inst/dina<11>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<6>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<5>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<4>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<3>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<2>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<1>" is sourceless and has been removed.
+The signal "cnn_inst/weight1_inst/douta<0>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<6>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<5>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<4>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<3>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<2>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<1>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_inst/douta<0>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<6>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<5>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<4>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<3>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<2>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<1>" is sourceless and has been removed.
+The signal "cnn_inst/bias1_inst/douta<0>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<6>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<5>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<4>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<3>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<2>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<1>" is sourceless and has been removed.
+The signal "cnn_inst/bias2_inst/douta<0>" is sourceless and has been removed.
+The signal "cnn_inst/weight2_1_inst/douta<6>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<5>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<4>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<3>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<2>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<1>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_1_inst/douta<0>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<6>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<5>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<4>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<3>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<2>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<1>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight2_2_inst/douta<0>" is sourceless and has been
+removed.
+The signal "cnn_inst/weight_inst/douta<3>" is sourceless and has been removed.
+The signal "cnn_inst/weight_inst/douta<2>" is sourceless and has been removed.
+The signal "cnn_inst/weight_inst/douta<1>" is sourceless and has been removed.
+The signal "cnn_inst/weight_inst/douta<0>" is sourceless and has been removed.
+The signal "cnn_inst/weight_inst/N0" is sourceless and has been removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[1].ram.ram_douta<0>" is sourceless and has been removed.
+ Sourceless block
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/has_mux_a.A/Mmux_dout_mux17" (ROM) removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[0].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[1].ram.ram_douta<1>" is sourceless and has been removed.
+ Sourceless block
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/has_mux_a.A/Mmux_dout_mux81" (ROM) removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[0].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[1].ram.ram_douta<2>" is sourceless and has been removed.
+ Sourceless block
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/has_mux_a.A/Mmux_dout_mux91" (ROM) removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[0].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[1].ram.ram_douta<3>" is sourceless and has been removed.
+ Sourceless block
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/has_mux_a.A/Mmux_dout_mux101" (ROM) removed.
+The signal
+"cnn_inst/weight_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+id.cstr/ramloop[0].ram.ram_douta<3>" is sourceless and has been removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE"
+(ROM) removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE"
+(ROM) removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE"
+(ROM) removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE"
+(ROM) removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE"
+(ROM) removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE"
+(ROM) removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE"
+(ROM) removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE"
+(ROM) removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE"
+(ROM) removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE"
+(ROM) removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+The signal "icon_debug/U0/U_ICON/iCOMMAND_SEL<3>" is sourceless and has been
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+ Sourceless block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "icon_debug/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		cnn_inst/XST_GND
+VCC 		cnn_inst/XST_VCC
+GND 		cnn_inst/bias1_inst/XST_GND
+VCC 		cnn_inst/bias1_inst/XST_VCC
+GND 		cnn_inst/bias2_inst/XST_GND
+VCC 		cnn_inst/bias2_inst/XST_VCC
+GND 		cnn_inst/feature_map_inst1/XST_GND
+VCC 		cnn_inst/feature_map_inst1/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst1/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst1/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst10/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst10/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst11/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst11/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst12/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst12/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst13/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst13/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst14/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst14/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst15/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst15/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst16/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst16/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst17/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst17/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst18/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst18/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst19/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst19/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst2/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst2/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst20/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst20/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst21/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst21/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst22/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst22/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst23/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst23/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst24/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst24/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst25/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst25/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst3/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst3/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst4/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst4/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst5/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst5/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst6/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst6/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst7/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst7/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst8/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst8/XST_VCC
+GND 		cnn_inst/feature_map_inst1/mul_inst9/XST_GND
+VCC 		cnn_inst/feature_map_inst1/mul_inst9/XST_VCC
+GND 		cnn_inst/feature_map_inst2/XST_GND
+VCC 		cnn_inst/feature_map_inst2/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst1/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst1/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst10/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst10/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst11/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst11/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst12/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst12/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst13/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst13/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst14/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst14/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst15/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst15/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst16/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst16/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst17/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst17/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst18/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst18/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst19/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst19/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst2/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst2/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst20/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst20/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst21/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst21/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst22/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst22/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst23/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst23/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst24/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst24/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst25/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst25/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst3/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst3/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst4/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst4/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst5/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst5/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst6/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst6/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst7/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst7/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst8/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst8/XST_VCC
+GND 		cnn_inst/feature_map_inst2/mul_inst9/XST_GND
+VCC 		cnn_inst/feature_map_inst2/mul_inst9/XST_VCC
+GND 		cnn_inst/image_inst/XST_GND
+VCC 		cnn_inst/image_inst/XST_VCC
+GND 		cnn_inst/mul_inst/XST_GND
+VCC 		cnn_inst/mul_inst/XST_VCC
+GND 		cnn_inst/subsampling1_inst1/XST_GND
+VCC 		cnn_inst/subsampling1_inst1/XST_VCC
+GND 		cnn_inst/subsampling1_inst2/XST_GND
+VCC 		cnn_inst/subsampling1_inst2/XST_VCC
+GND 		cnn_inst/subsampling2_inst/XST_GND
+VCC 		cnn_inst/subsampling2_inst/XST_VCC
+GND 		cnn_inst/taps0x/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps0x/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps1_0y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps1_0y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps1_1y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps1_1y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps1_2y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps1_2y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps1_3y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps1_3y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps1x/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps1x/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps2_0y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps2_0y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps2_1y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps2_1y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps2_2y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps2_2y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps2_3y/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps2_3y/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps2x/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps2x/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/taps3x/blk00000001/blk00000002/blk00000003
+VCC 		cnn_inst/taps3x/blk00000001/blk00000002/blk00000004
+GND 		cnn_inst/weight1_inst/XST_GND
+VCC 		cnn_inst/weight1_inst/XST_VCC
+GND 		cnn_inst/weight2_1_inst/XST_GND
+VCC 		cnn_inst/weight2_1_inst/XST_VCC
+GND 		cnn_inst/weight2_2_inst/XST_GND
+VCC 		cnn_inst/weight2_2_inst/XST_VCC
+GND 		cnn_inst/weight2_inst/XST_GND
+VCC 		cnn_inst/weight2_inst/XST_VCC
+GND 		cnn_inst/weight_inst/XST_GND
+VCC 		cnn_inst/weight_inst/XST_VCC
+GND 		icon_debug/XST_GND
+VCC 		icon_debug/XST_VCC
+LUT4 		ila_filter_debug/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+GND 		ila_filter_debug/XST_GND
+VCC 		ila_filter_debug/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_50M                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| reset_n                            | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
